@@ -1,8 +1,14 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
-import HelloWorld from './components/MovieFinder';
+import { MovieFinder } from './components/MovieFinder';
 
-ReactDOM.render(
-    <HelloWorld />,
+document.addEventListener("DOMContentLoaded", function(){
+	
+	ReactDOM.render(
+    <MovieFinder />,
     document.getElementById('main')
 );
+
+
+})
+
