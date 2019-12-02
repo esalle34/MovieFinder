@@ -17,6 +17,7 @@ Pour modifier des fichiers sources de ce projet :
 		- npm run prod-script pour les faire tourner en mode production.
 
 PS : Ce projet n'est selon moi pas finaliser, il peut être encore largement améliorer.
+La fonction recherche fonctionne en partie.
 
 Cordialement,
 
