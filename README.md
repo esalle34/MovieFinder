@@ -8,7 +8,7 @@ Pour installer ce projet :
 Pour initialiser ce projet : 
 
 - Ecrire dans un invité de commande : npm run server
-- Se connecter à http://locahost:3000 pour voir le résultat
+- Se connecter à http://localhost:3000 pour voir le résultat
 
 Pour modifier des fichiers sources de ce projet :
 
