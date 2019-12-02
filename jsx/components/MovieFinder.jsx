@@ -50,9 +50,65 @@ export class MovieFinder extends React.Component {
 
 		super(props);
 
-		this.state = { data : null };
+		this.state = { data : null, sort_by : "popularity.desc"};
+		this.changeFunction = this.changeFunction.bind(this);
+		this.searchFunction = this.searchFunction.bind(this);
 
 	}
+
+	changeFunction(page, sort_by){
+
+		this.setState({ page : page, sort_by : sort_by });
+
+	}
+
+
+	searchFunction(e){
+
+		console.log(e);
+
+		this.setState({ search : e });
+
+	}
+
+	componentDidUpdate(prevProps, prevState){
+
+		var carousel_data="";
+		var result = "";
+
+		console.log(this.state.search);
+
+		if(prevProps.search != this.props.search || prevState.search != this.state.search){
+
+			if(this.state.search != ""){
+
+			var p = Request.get('https://api.themoviedb.org/3/search/movie')
+				.query("api_key=0b7f783144e227c2ef2a6bf7fbeaf6dd")
+				.query("sort_by="+this.state.sort_by)
+				.query("query="+this.state.search)
+				.then(function(res){
+
+					carousel_data = res.body.results.slice(0, 10);
+					result = res.body;
+
+				}.bind(this), function(err){
+
+					console.log("Error while fetching movie api " + err);
+
+				}.bind(this))
+
+				Promise.all([p]).then(function(values){
+
+					this.setState({ data : result, carousel_data : carousel_data});
+
+				}.bind(this))
+
+			}
+
+		}
+
+	}
+
 
 	componentDidMount(){
 
@@ -61,7 +117,7 @@ export class MovieFinder extends React.Component {
 
 		var p = Request.get('https://api.themoviedb.org/3/discover/movie')
 			.query("api_key=0b7f783144e227c2ef2a6bf7fbeaf6dd")
-			.query("sort_by=popularity.desc")
+			.query("sort_by=" + this.state.sort_by)
 			.then(function(res){
 
 				carousel_data = res.body.results.slice(0, 10);
@@ -83,17 +139,17 @@ export class MovieFinder extends React.Component {
 
 		render() {
 			return (<div><HeaderWrapper>
-					<Container>
-						<Layer src="/img/entete.jpg "/>
-						<Header />
-						<Carousel data={this.state.carousel_data}/>
-						<hr />
-					</Container>
+				<Container>
+				<Layer src="/img/entete.jpg "/>
+				<Header searchFunction={this.searchFunction} />
+				<Carousel data={this.state.carousel_data}/>
+				<hr />
+				</Container>
 				</HeaderWrapper>
 				<MainWrapper>
-					<Container>
-						<AllMovies data={this.state.data}/>
-					</Container>
+				<Container>
+				<AllMovies data={this.state.data} changeFunction={this.changeFunction}/>
+				</Container>
 				</MainWrapper></div>);
 		}
 	}

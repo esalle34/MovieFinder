@@ -37,40 +37,54 @@ export default class Vignette extends React.Component{
 
 		if(this.props.mode == "carousel"){
 
-		if(this.props.img != null){
+			if(this.props.img != null){
 
 			url = "http://image.tmdb.org/t/p/w185" + this.props.img;
 			view = <div key={this.props.id}><img className="owl-lazy" data-src={url} alt={this.props.alt} title={this.props.title} />
-				<Movietitle>{this.props.title}</Movietitle>
-				<Movieyear>{year}</Movieyear></div>;
+			<Movietitle>{this.props.title}</Movietitle>
+			<Movieyear>{year}</Movieyear></div>;
 
 		}else{
 
-			view = <div key={this.props.id}>
-				<Movietitle>{this.props.title}</Movietitle>
-				<Movieyear>{year}</Movieyear></div>
+			url= "https://image.shutterstock.com/image-vector/no-image-available-sign-internet-260nw-261719003.jpg";
+
+			view = 			view = <div key={this.props.id} className="pages-img-container"><LazyLoad><img className="pages-img" src={url} alt={this.props.alt} title={this.props.title} /></LazyLoad>
+			<Movietitle>{this.props.title}</Movietitle>
+			<Movieyear>{year}</Movieyear></div>
 
 		}
 
-		}else if(this.props.mode == "pages"){
+	}else if(this.props.mode == "pages"){
+
+		if(this.props.img != null){
 
 			url = "http://image.tmdb.org/t/p/w185" + this.props.img;
 			view = <div key={this.props.id} className="pages-img-container"><LazyLoad><img className="pages-img" src={url} alt={this.props.alt} title={this.props.title} /></LazyLoad>
-				<Movietitle>{this.props.title}</Movietitle>
-				<Movieyear>{year}</Movieyear></div>;
+			<Movietitle>{this.props.title}</Movietitle>
+			<Movieyear>{year}</Movieyear></div>;
 
-		};
+		}else{
 
-		this.setState({ view : view });
+			url= "https://image.shutterstock.com/image-vector/no-image-available-sign-internet-260nw-261719003.jpg";
 
-	}
+			view = <div key={this.props.id} className="pages-img-container"><LazyLoad><img className="pages-img" src={url} alt={this.props.alt} title={this.props.title} /></LazyLoad>
+			<Movietitle>{this.props.title}</Movietitle>
+			<Movieyear>{year}</Movieyear></div>
 
-	render(){
+		}
+
+	};
+
+	this.setState({ view : view });
+
+}
+
+render(){
 
 
 
-		return this.state.view;
+	return this.state.view;
 
-	}
+}
 
 }

@@ -34,6 +34,23 @@ const Logo = styled.img`
 
 class Header extends React.Component{
 
+  constructor(props){
+
+      super(props);
+
+      this.searchFunction = this.searchFunction.bind(this);
+  }
+
+  searchFunction(e){
+
+    if(typeof e.target.value != "undefined"){
+
+      this.props.searchFunction(e.target.value);
+
+    }
+
+  }
+
 	render(){
 	  return <Wrapper>
 	  		       <Row>
@@ -43,7 +60,7 @@ class Header extends React.Component{
             	   </Col>
                  <Col sm="4" md="4" />
             	   <Col sm="4" md="4">
-	  				      <SearchBar />
+	  				      <SearchBar searchFunction={this.searchFunction}/>
                  </Col>
                 </Row>
           </Wrapper>;

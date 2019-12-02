@@ -19,7 +19,7 @@ class SearchBar extends React.Component{
   render(){
 
    return (<InputGroup>
-            <Input placeholder="Rechercher..." />
+            <Input onChange={this.props.searchFunction} placeholder="Rechercher..." />
               <InputGroupAddon>
                 <img src="/svg/searchicon.svg"/>
               </InputGroupAddon>
