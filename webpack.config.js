@@ -1,5 +1,5 @@
 const webpack = require('webpack');
-const MinifyPlugin = require("babel-minify-webpack-plugin");
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   entry: { main: './jsx/main.jsx' },
@@ -28,9 +28,23 @@ module.exports = {
     publicPath: '/',
     filename: '[name].min.js'
   },
-  plugins: [
-  new MinifyPlugin({})
-  ],
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        uglifyOptions: {
+          warnings: false,
+          parse: {},
+          compress: {},
+          mangle: true, // Note `mangle.properties` is `false` by default.
+          output: null,
+          toplevel: false,
+          nameCache: null,
+          ie8: false,
+          keep_fnames: false,
+        },
+      }),
+    ],
+  },
   devServer: {
     contentBase: './js'
   }

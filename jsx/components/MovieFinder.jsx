@@ -3,9 +3,10 @@ import styled from 'styled-components';
 import { generateMedia } from "styled-media-query";
 import Request from 'superagent';
 import BootstrapProvider from '@bootstrap-styled/provider';
-import { Container } from '@bootstrap-styled/v4';
+import { Container, Row } from '@bootstrap-styled/v4';
 import Header from './Header';
 import Carousel from './Carousel';
+import AllMovies from './AllMovies';
 
 
 const customMedia = generateMedia({
@@ -14,34 +15,34 @@ const customMedia = generateMedia({
 	mobile: "464px"
 });
 
-const Layer = styled.div`
-
-opacity: 0.2;
+const Layer = styled.img`
 
 position: absolute;
-
-width: 100%;
-
-height: 100%;
-
 top: 0;
-
 left: 0;
-
-z-index: -1;
-
-url('/img/entete.jpg');
-background-repeat: no-repeat;
-background-size: 100% 500px;
-background-image: url("img/entete.jpg");
+width: 100%;
+height: 100%;
+opacity: 0.2;
 
 `
 
-const Wrapper = styled.header`
+const HeaderWrapper = styled.main`
 
 padding : 15px;
+position : relative;
 
 `;
+
+const MainWrapper = styled.main`
+
+
+min-height: 200px;
+background: linear-gradient(#334157,#0D1D37);
+padding: 15px;
+margin-top: 0px;
+
+
+`
 
 export class MovieFinder extends React.Component {
 
@@ -60,7 +61,7 @@ export class MovieFinder extends React.Component {
 
 		var p = Request.get('https://api.themoviedb.org/3/discover/movie')
 			.query("api_key=0b7f783144e227c2ef2a6bf7fbeaf6dd")
-			.query("sort_by=popularity")
+			.query("sort_by=popularity.desc")
 			.then(function(res){
 
 				carousel_data = res.body.results.slice(0, 10);
@@ -81,13 +82,18 @@ export class MovieFinder extends React.Component {
 		}
 
 		render() {
-			return <Wrapper>
+			return (<div><HeaderWrapper>
 					<Container>
+						<Layer src="/img/entete.jpg "/>
 						<Header />
-						<Layer />
 						<Carousel data={this.state.carousel_data}/>
 						<hr />
 					</Container>
-				</Wrapper>;
+				</HeaderWrapper>
+				<MainWrapper>
+					<Container>
+						<AllMovies data={this.state.data}/>
+					</Container>
+				</MainWrapper></div>);
 		}
 	}

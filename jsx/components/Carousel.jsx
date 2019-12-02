@@ -1,8 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Container, Row, Col } from '@bootstrap-styled/v4';
+import { Row, Col } from '@bootstrap-styled/v4';
 import OwlCarousel from 'react-owl-carousel2';
 import 'react-owl-carousel2/lib/styles.css';
+import Vignette from "./subcomponents/Vignette";
 
 const Subtitle = styled.h2`
 
@@ -10,17 +11,6 @@ color: #fff;
 
 `
 
-const Movietitle = styled.h3`
-
-color: #fff;
-
-`
-
-const Movieyear = styled.p`
-
-color: #fff;
-
-`
 
 class Carousel extends React.Component{
 
@@ -38,7 +28,23 @@ class Carousel extends React.Component{
 			rewind: true,
 			autoplay: false,
 			lazyLoad: true,
-			navText: ["<img src='/svg/sliderpreviousarrow.svg'>","<img src='/svg/slidernextarrow.svg'>"]
+			navText: ["<img src='/svg/sliderpreviousarrow.svg'>","<img src='/svg/slidernextarrow.svg'>"],
+			responsive:{
+       					 0:{
+            				items:3,
+           					nav:true,
+           					rewing:true,
+           					autoplay:false,
+           					lazyLoad : true,
+        				},
+       	 				480:{
+            				items:4,
+            				nav: true,
+							rewind: true,
+							autoplay: false,
+							lazyLoad: true,
+        				},
+    				}
 		};
 
 		if(typeof nextProps.data != undefined && nextProps.data != null){
@@ -49,7 +55,7 @@ class Carousel extends React.Component{
 
 				if(typeof element != undefined && element != null){
 
-				carousel.push(<Vignette title ={element.title} year = {element.release_date} img = {element.poster_path} key={element.id} />);
+				carousel.push(<Vignette title ={element.title} year = {element.release_date} img = {element.poster_path} key={element.id} mode="carousel" />);
 			}
 
 		})
@@ -76,47 +82,6 @@ class Carousel extends React.Component{
 
 	}
 
-
-}
-
-class Vignette extends React.Component{
-
-	constructor(props){
-
-		super(props);
-
-	}
-
-	render(){
-
-		var url = "";
-		var year = "";
-		var view = "";
-
-		if(this.props.year != ""){
-
-			var date = new Date(this.props.year);
-			year = date.getFullYear();
-		}
-
-		if(this.props.img != null){
-
-			url = "http://image.tmdb.org/t/p/w185" + this.props.img;
-			view = <div key={this.props.id}><img className="owl-lazy" data-src={url} alt={this.props.alt} title={this.props.title} />
-				<Movietitle>{this.props.title}</Movietitle>
-				<Movieyear>{year}</Movieyear></div>;
-
-		}else{
-
-			view = <div key={this.props.id}>
-				<Movietitle>{this.props.title}</Movietitle>
-				<Movieyear>{year}</Movieyear></div>
-
-		}
-
-		return view;
-
-	}
 
 }
 
