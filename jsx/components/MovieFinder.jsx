@@ -26,7 +26,7 @@ opacity: 0.2;
 
 `
 
-const HeaderWrapper = styled.main`
+const HeaderWrapper = styled.header`
 
 padding : 15px;
 position : relative;
@@ -50,7 +50,7 @@ export class MovieFinder extends React.Component {
 
 		super(props);
 
-		this.state = { data : null, sort_by : "popularity.desc"};
+		this.state = { data : null, sort_by : "popularity.desc", page:1};
 		this.changeFunction = this.changeFunction.bind(this);
 		this.searchFunction = this.searchFunction.bind(this);
 
@@ -65,8 +65,6 @@ export class MovieFinder extends React.Component {
 
 	searchFunction(e){
 
-		console.log(e);
-
 		this.setState({ search : e });
 
 	}
@@ -76,15 +74,14 @@ export class MovieFinder extends React.Component {
 		var carousel_data="";
 		var result = "";
 
-		console.log(this.state.search);
-
 		if(prevProps.search != this.props.search || prevState.search != this.state.search){
 
-			if(this.state.search != ""){
+			if(this.state.search != "" && this.state.search.length > 3){
 
 			var p = Request.get('https://api.themoviedb.org/3/search/movie')
 				.query("api_key=0b7f783144e227c2ef2a6bf7fbeaf6dd")
 				.query("sort_by="+this.state.sort_by)
+				.query("page="+this.state.page)
 				.query("query="+this.state.search)
 				.then(function(res){
 

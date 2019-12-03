@@ -2,13 +2,13 @@
 
 Pour installer ce projet :
 
-- Réaliser un git checkout de la branche.
+- Réaliser un git clone de la branche.
 - Faire un npm install.
 
 Pour initialiser ce projet : 
 
 - Ecrire dans un invité de commande : npm run server
-- Se connecter à http://localhost:3000 pour voir le résultat
+- Se connecter à http://localhost pour voir le résultat
 
 Pour modifier des fichiers sources de ce projet :
 

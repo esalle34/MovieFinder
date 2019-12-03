@@ -8,7 +8,7 @@ const Title = styled.h1`
   text-align: center;
   color: blue;
 `;
-const Wrapper = styled.header`
+const Wrapper = styled.div`
   
   min-height: 100px;
 

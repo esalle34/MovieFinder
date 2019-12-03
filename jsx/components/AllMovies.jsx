@@ -66,7 +66,7 @@ export default class AllMovies extends React.Component{
 
 	if(this.props.data != prevProps.data || this.state.data != prevState.data){
 
-		if(this.state.data != null){
+		if(this.state.data != null && this.state.data != prevState.data){
 
 		data = this.state.data;
 
