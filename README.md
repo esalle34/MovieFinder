@@ -1,4 +1,4 @@
-## ReadMe ##
+## MovieFinder ##
 
 Pour installer ce projet :
 
