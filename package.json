@@ -1,49 +1,29 @@
 {
-  "name": "MovieFinder",
-  "version": "1.0.0",
-  "description": "MovieFinder App",
-  "main": "webpack.config.js",
+  "name": "arkcit-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "dev-script": "webpack --mode development",
-    "prod-script": "webpack --mode production",
-    "server": "nodemon server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/esalle34/test.git"
-  },
-  "keywords": [
-    "MovieFinder"
-  ],
-  "author": "Eric Salle",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/esalle34/test/issues"
-  },
-  "homepage": "https://github.com/esalle34/test#readme",
-  "devDependencies": {
-    "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
-    "@babel/preset-react": "^7.7.4",
-    "@bootstrap-styled/provider": "^1.4.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "file-loader": "^5.0.2",
-    "nodemon": "^2.0.1",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-lazy-load": "^3.0.13",
-    "react-owl-carousel2": "^0.3.0",
-    "style-loader": "^1.0.1",
-    "styled-components": "^4.4.1",
-    "styled-media-query": "^2.1.2",
-    "superagent": "^5.1.1",
-    "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "dev": "next dev",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "build": "next build",
+    "start": "next start",
+    "ci": "npm run typecheck && npm run build"
   },
   "dependencies": {
-    "@bootstrap-styled/v4": "^3.2.1",
-    "express": "^4.17.1"
+    "@arkcit/engine": "^0.3.1",
+    "@arkcit/engine-react": "^0.3.1",
+    "@arkcit/react-ui": "^0.3.1",
+    "@tailwindcss/postcss": "^4.1.12",
+    "next": "^15.5.13",
+    "react": "^19.1.0",
+    "react-country-flag": "^3.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "~5.9.3"
   }
 }

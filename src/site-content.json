@@ -1,0 +1,16 @@
+{
+  "siteTitle": "Arkcit App",
+  "descriptions": {
+    "EN": "Homepage rendered from the Studio backend when available."
+  },
+  "supportedLanguages": [
+    "EN",
+    "FR"
+  ],
+  "supportedCountries": [
+    "gb",
+    "fr",
+    "us"
+  ],
+  "defaultLocale": "EN-gb"
+}

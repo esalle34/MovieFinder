@@ -1,0 +1,225 @@
+{
+  "cmnhoqvu6000ck6011vwaqvkl": {
+    "nodes": [
+      {
+        "id": "root-container",
+        "type": "Container",
+        "props": {},
+        "children": [
+          {
+            "id": "hero-section",
+            "type": "Container",
+            "props": {},
+            "children": [
+              {
+                "id": "hero-title",
+                "type": "H1",
+                "props": {
+                  "children": "Créez l'avenir avec Arkcit"
+                }
+              },
+              {
+                "id": "hero-lead",
+                "type": "Lead",
+                "props": {
+                  "children": "La plateforme de design et développement tout-en-un pour les créatifs ambitieux."
+                }
+              },
+              {
+                "id": "hero-cta",
+                "type": "Button",
+                "props": {
+                  "children": "Commencer gratuitement"
+                }
+              }
+            ]
+          },
+          {
+            "id": "features-section",
+            "type": "Grid",
+            "props": {
+              "layout": {
+                "widthPct": 100
+              }
+            },
+            "children": [
+              {
+                "id": "card-1",
+                "type": "Card",
+                "props": {
+                  "layout": {
+                    "widthPct": 100
+                  }
+                },
+                "children": [
+                  {
+                    "id": "c1-h",
+                    "type": "CardHeader",
+                    "props": {},
+                    "children": [
+                      {
+                        "id": "c1-t",
+                        "type": "H3",
+                        "props": {
+                          "children": "Design Rapide"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "c1-c",
+                    "type": "CardContent",
+                    "props": {},
+                    "children": [
+                      {
+                        "id": "c1-txt",
+                        "type": "Text",
+                        "props": {
+                          "children": "Prototypage haute fidélité en quelques clics."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "card-2",
+                "type": "Card",
+                "props": {
+                  "layout": {
+                    "widthPct": 100
+                  }
+                },
+                "children": [
+                  {
+                    "id": "c2-h",
+                    "type": "CardHeader",
+                    "props": {},
+                    "children": [
+                      {
+                        "id": "c2-t",
+                        "type": "H3",
+                        "props": {
+                          "children": "Collaboration"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "c2-c",
+                    "type": "CardContent",
+                    "props": {},
+                    "children": [
+                      {
+                        "id": "c2-txt",
+                        "type": "Text",
+                        "props": {
+                          "children": "Travaillez en équipe en temps réel."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": "card-3",
+                "type": "Card",
+                "props": {
+                  "layout": {
+                    "widthPct": 100
+                  }
+                },
+                "children": [
+                  {
+                    "id": "c3-h",
+                    "type": "CardHeader",
+                    "props": {},
+                    "children": [
+                      {
+                        "id": "c3-t",
+                        "type": "H3",
+                        "props": {
+                          "children": "Déploiement"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "c3-c",
+                    "type": "CardContent",
+                    "props": {},
+                    "children": [
+                      {
+                        "id": "c3-txt",
+                        "type": "Text",
+                        "props": {
+                          "children": "Mise en ligne instantanée sur nos serveurs."
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "conversion-section",
+            "type": "Container",
+            "props": {},
+            "children": [
+              {
+                "id": "conv-h2",
+                "type": "H2",
+                "props": {
+                  "children": "Prêt à lancer votre projet ?"
+                }
+              },
+              {
+                "id": "conv-btn",
+                "type": "Button",
+                "props": {
+                  "children": "Contactez notre équipe"
+                }
+              }
+            ]
+          },
+          {
+            "id": "faq-section",
+            "type": "Container",
+            "props": {},
+            "children": [
+              {
+                "id": "faq-h2",
+                "type": "H2",
+                "props": {
+                  "children": "Questions fréquentes"
+                }
+              },
+              {
+                "id": "faq-acc",
+                "type": "Accordion",
+                "props": {
+                  "title": "Comment fonctionne Arkcit ?",
+                  "layout": {
+                    "widthPct": 100
+                  }
+                },
+                "children": [
+                  {
+                    "id": "faq-txt",
+                    "type": "Text",
+                    "props": {
+                      "children": "Arkcit utilise une approche modulaire pour simplifier le développement web."
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "title": "Studio",
+    "version": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "contentWidth": "7xl",
+  "header": {
+    "logoPath": "",
+    "logoSize": "medium",
+    "navigationMode": "toggle",
+    "localePreferencePopinEnabled": false
+  },
+  "footer": {
+    "enabled": true,
+    "text": "Powered by Arkcit App Assembly",
+    "logoPath": "",
+    "logoPosition": "left",
+    "logoSize": "medium",
+    "sectionBordersEnabled": true,
+    "sectionBackgroundEnabled": true,
+    "sections": [
+      {
+        "id": "footer-section-1",
+        "title": "Resources",
+        "textAlignment": "left",
+        "links": [
+          {
+            "id": "footer-link-1",
+            "label": "Home",
+            "href": "/",
+            "localizedHrefs": {
+              "FR": "/accueil"
+            },
+            "localizedLabels": {
+              "FR": "Accueil"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

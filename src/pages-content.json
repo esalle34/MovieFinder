@@ -1,0 +1,14 @@
+{
+  "pages": [
+    {
+      "id": "cmnhoqvu6000ck6011vwaqvkl",
+      "sourcePageName": "Homepage",
+      "routePath": "/",
+      "localizedRoutePaths": {},
+      "pageTitle": "Homepage",
+      "navigationLabel": "Homepage",
+      "localizedNavigationLabels": {},
+      "includeInNavigation": false
+    }
+  ]
+}
