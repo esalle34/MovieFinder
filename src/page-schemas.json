@@ -1,5 +1,5 @@
 {
-  "cmnhoqvu6000ck6011vwaqvkl": {
+  "cmnuwszd00039hago7bh8n7bq": {
     "nodes": [
       {
         "id": "root-container",
@@ -15,21 +15,21 @@
                 "id": "hero-title",
                 "type": "H1",
                 "props": {
-                  "children": "Créez l'avenir avec Arkcit"
+                  "children": "Bienvenue chez Arkcit Studio"
                 }
               },
               {
                 "id": "hero-lead",
                 "type": "Lead",
                 "props": {
-                  "children": "La plateforme de design et développement tout-en-un pour les créatifs ambitieux."
+                  "children": "Nous transformons vos idées en expériences numériques exceptionnelles."
                 }
               },
               {
                 "id": "hero-cta",
                 "type": "Button",
                 "props": {
-                  "children": "Commencer gratuitement"
+                  "children": "Commencer votre projet"
                 }
               }
             ]
@@ -44,7 +44,7 @@
             },
             "children": [
               {
-                "id": "card-1",
+                "id": "feature-1",
                 "type": "Card",
                 "props": {
                   "layout": {
@@ -53,37 +53,23 @@
                 },
                 "children": [
                   {
-                    "id": "c1-h",
-                    "type": "CardHeader",
-                    "props": {},
-                    "children": [
-                      {
-                        "id": "c1-t",
-                        "type": "H3",
-                        "props": {
-                          "children": "Design Rapide"
-                        }
-                      }
-                    ]
+                    "id": "f1-title",
+                    "type": "H3",
+                    "props": {
+                      "children": "Design Innovant"
+                    }
                   },
                   {
-                    "id": "c1-c",
-                    "type": "CardContent",
-                    "props": {},
-                    "children": [
-                      {
-                        "id": "c1-txt",
-                        "type": "Text",
-                        "props": {
-                          "children": "Prototypage haute fidélité en quelques clics."
-                        }
-                      }
-                    ]
+                    "id": "f1-text",
+                    "type": "Text",
+                    "props": {
+                      "children": "Des interfaces modernes pensées pour vos utilisateurs."
+                    }
                   }
                 ]
               },
               {
-                "id": "card-2",
+                "id": "feature-2",
                 "type": "Card",
                 "props": {
                   "layout": {
@@ -92,37 +78,23 @@
                 },
                 "children": [
                   {
-                    "id": "c2-h",
-                    "type": "CardHeader",
-                    "props": {},
-                    "children": [
-                      {
-                        "id": "c2-t",
-                        "type": "H3",
-                        "props": {
-                          "children": "Collaboration"
-                        }
-                      }
-                    ]
+                    "id": "f2-title",
+                    "type": "H3",
+                    "props": {
+                      "children": "Développement Agile"
+                    }
                   },
                   {
-                    "id": "c2-c",
-                    "type": "CardContent",
-                    "props": {},
-                    "children": [
-                      {
-                        "id": "c2-txt",
-                        "type": "Text",
-                        "props": {
-                          "children": "Travaillez en équipe en temps réel."
-                        }
-                      }
-                    ]
+                    "id": "f2-text",
+                    "type": "Text",
+                    "props": {
+                      "children": "Une approche flexible pour des résultats rapides."
+                    }
                   }
                 ]
               },
               {
-                "id": "card-3",
+                "id": "feature-3",
                 "type": "Card",
                 "props": {
                   "layout": {
@@ -131,32 +103,18 @@
                 },
                 "children": [
                   {
-                    "id": "c3-h",
-                    "type": "CardHeader",
-                    "props": {},
-                    "children": [
-                      {
-                        "id": "c3-t",
-                        "type": "H3",
-                        "props": {
-                          "children": "Déploiement"
-                        }
-                      }
-                    ]
+                    "id": "f3-title",
+                    "type": "H3",
+                    "props": {
+                      "children": "Support Expert"
+                    }
                   },
                   {
-                    "id": "c3-c",
-                    "type": "CardContent",
-                    "props": {},
-                    "children": [
-                      {
-                        "id": "c3-txt",
-                        "type": "Text",
-                        "props": {
-                          "children": "Mise en ligne instantanée sur nos serveurs."
-                        }
-                      }
-                    ]
+                    "id": "f3-text",
+                    "type": "Text",
+                    "props": {
+                      "children": "Un accompagnement dédié à chaque étape."
+                    }
                   }
                 ]
               }
@@ -168,17 +126,17 @@
             "props": {},
             "children": [
               {
-                "id": "conv-h2",
+                "id": "conv-title",
                 "type": "H2",
                 "props": {
-                  "children": "Prêt à lancer votre projet ?"
+                  "children": "Prêt à passer à l'action ?"
                 }
               },
               {
                 "id": "conv-btn",
                 "type": "Button",
                 "props": {
-                  "children": "Contactez notre équipe"
+                  "children": "Contactez-nous dès maintenant"
                 }
               }
             ]
@@ -189,27 +147,27 @@
             "props": {},
             "children": [
               {
-                "id": "faq-h2",
+                "id": "faq-title",
                 "type": "H2",
                 "props": {
                   "children": "Questions fréquentes"
                 }
               },
               {
-                "id": "faq-acc",
+                "id": "faq-item-1",
                 "type": "Accordion",
                 "props": {
-                  "title": "Comment fonctionne Arkcit ?",
+                  "title": "Quels sont vos délais ?",
                   "layout": {
                     "widthPct": 100
                   }
                 },
                 "children": [
                   {
-                    "id": "faq-txt",
+                    "id": "faq-1-body",
                     "type": "Text",
                     "props": {
-                      "children": "Arkcit utilise une approche modulaire pour simplifier le développement web."
+                      "children": "Nos délais varient selon la complexité de votre projet."
                     }
                   }
                 ]
